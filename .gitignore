@@ -1,0 +1,7 @@
+package-lock.json
+node_modules/
+logs/
+.vscode/
+.envgit push -u --force origin master
+.envgit remote add origin
+.env

@@ -1,0 +1,25 @@
+{
+  "extends": "strongloop",
+  "rules": {
+    "max-len": [
+      2,
+      100,
+      8
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  }
+}

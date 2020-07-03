@@ -1,0 +1,42 @@
+'use strict';
+
+module.exports = {
+  apps: [{
+    name: 'node-app',
+    script: 'app.js',
+    instances: '1',
+    exec_mode: 'cluster',
+    watch: true,
+    ignore_watch:['logs'],
+    max_memory_restart: '1G',
+    autorestart: true,
+    env: {
+      NODE_ENV: 'development',
+      PORT: process.env.PORT,
+      DB_HOST: process.env.DB_HOST,
+      DB_NAME: process.env.DB_NAME,
+      DB_USERNAME: process.env.DB_USERNAME,
+      DB_PASSWORD: process.env.DB_PASSWORD,
+      REDIS_HOST: process.env.REDIS_HOST,
+      REDIS_PORT: process.env.REDIS_PORT,
+      REDIS_TOKEN_EXP: process.env.REDIS_TOKEN_EXP,
+      REDIS_OTP_EXP: process.env.REDIS_OTP_EXP,
+      SEND_GRID_API_KEY: process.env.SEND_GRID_API_KEY,
+      SEND_GRID_SENDER: process.env.SEND_GRID_SENDER,
+    },
+    env_production: {
+      NODE_ENV: 'production',
+      PORT: process.env.PORT,
+      DB_HOST: process.env.DB_HOST,
+      DB_NAME: process.env.DB_NAME,
+      DB_USERNAME: process.env.DB_USERNAME,
+      DB_PASSWORD: process.env.DB_PASSWORD,
+      REDIS_HOST: process.env.REDIS_HOST,
+      REDIS_PORT: process.env.REDIS_PORT,
+      REDIS_TOKEN_EXP: process.env.REDIS_TOKEN_EXP,
+      REDIS_OTP_EXP: process.env.REDIS_OTP_EXP,
+      SEND_GRID_API_KEY: process.env.SEND_GRID_API_KEY,
+      SEND_GRID_SENDER: process.env.SEND_GRID_SENDER,
+    },
+  }],
+};
